@@ -2,8 +2,7 @@
 Dedicated internship work log for ESA Biomass P-band SAR secondary science research. Maintained as a working record for my MSc internship minithesis report and for my ESA supervisor's ease of access. It will (hopefully) include research in oceanic, cryospheric, coastal and desert processing pipelines using Biomass data.
 
 # Data
-The Biomass satellite, launched April 2025, carries a P-band SAR (435 MHz) capable of deep penetration through vegetation, dry sand and ice — making it uniquely suited to secondary science investigations across diverse Earth surface types.
-All data is sourced from the ESA MAAP Explorer platform; explorer.maap.eo.esa.int. Products are mostly BiomassLevel1a S1_SCS__1S (Single Look Complex Stripmap), full polarimetry (HH, HV, VH, VV), P-band 435 MHz, processed by the Biomass Central Processing Facility. Raw data files (TIFFs, binary products) are not tracked in this repository due to size, though there is guidance on how to aquire them found in the 'Reusable Scripts' folder - 'MAAP Product aquisition'.
+The Biomass satellite, launched April 2025, carries a P-band SAR (435 MHz) capable of deep penetration through vegetation, dry sand and ice, thus making it uniquely suited to secondary science investigations across diverse Earth surface types. All data is sourced from the ESA MAAP Explorer platform; explorer.maap.eo.esa.int. Products are mostly BiomassLevel1a S1_SCS__1S (Single Look Complex Stripmap), full polarimetry (HH, HV, VH, VV), P-band 435 MHz, processed by the Biomass Central Processing Facility. Raw data files (TIFFs, binary products) are not tracked in this repository due to size, though there is guidance on how to aquire them found in the 'Reusable Scripts' folder - 'MAAP Product aquisition'.
 
 # Code Sources
 All code found in this repository is based on and taken directly from:
