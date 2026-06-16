@@ -11,15 +11,15 @@ _(Adapted into single file format for Bjorn)_
 - Additional Notes
 
 # ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) `Expected Learning Outcomes`
-Upon completion of this module students should be able to:
-•	Transfer space project management concepts and methods into a workplace environment;
-•	Depending on the project, apply skills in, for example, report-writing, data analysis, coding, systems engineering, modelling and payload design, to address and solve previously unseen challenges;
-•	Effectively and reliably participate in a team, understanding different roles and their associated responsibilities;
-•	Illustrate the work undertaken in the form of a well-designed poster, accessible to a broad technical audience;
-•	Verbally communicate the key elements of the project;
-•	Justify decisions made and conclusions drawn about the project, when questioned;
-•	Place the work within its context in a comprehensive written report.
-•	This is a 30ECTS module meaning 500-600 hours of student effort, approx. equivalent to 40 hours per week for 12 weeks.
+Upon completion of this module students should be able to:  
+•	Transfer space project management concepts and methods into a workplace environment  
+•	Depending on the project, apply skills in, for example, report-writing, data analysis, coding, systems engineering, modelling and payload design, to address and solve previously unseen challenges  
+•	Effectively and reliably participate in a team, understanding different roles and their associated responsibilities   
+•	Illustrate the work undertaken in the form of a well-designed poster, accessible to a broad technical audience  
+•	Verbally communicate the key elements of the project  
+•	Justify decisions made and conclusions drawn about the project, when questioned  
+•	Place the work within its context in a comprehensive written report.  
+•	This is a 30ECTS module meaning 500-600 hours of student effort, approx. equivalent to 40 hours per week for 12 weeks.  
 
 # ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) `Overall Module Assessment Breakdown`
 Three components contribute to the overall module grade:
