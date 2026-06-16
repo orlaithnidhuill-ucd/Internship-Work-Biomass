@@ -3,7 +3,7 @@ _(Adapted into single file format for Bjorn)_
 *Author;* Professor Lorraine Hanlon. (Compiled by Orlaith with author permission).    
 *Document Sources;*  UCD Module - PHYC40950 Space Sector Internship.
 
-_Table of Contents_
+# ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) `Table of Contents` 
 - Learning Outcomes
 - Assessment Information
 - Poster
@@ -26,8 +26,8 @@ Three components contribute to the overall module grade:
 - Written report (50%)
 - Host supervisor's assessment (30%) (see image below)
 - Poster presentation and Q&A (20%)
-  
-<img width="895" height="424" alt="image" src="https://github.com/user-attachments/assets/89499471-8df1-4db3-889d-102ca7103186" />
+
+<img width="808" height="413" alt="image" src="https://github.com/user-attachments/assets/e35e462a-6c54-4240-bee9-deb8243e523c" />
 
 ## ![#f03c15](https://placehold.co/15x15/f03c15/f03c15.png) `Poster Presentation`
 Instructions and resources for preparing your poster. The templates are to provide a basic structure and overall design aesthetic. However, you don't have to stick to the presentation format (e.g. the named section headings, 3 figures across the bottom etc) as shown if it doesn't work for your project.
@@ -84,10 +84,10 @@ equipment; coding; processes] [5-6 pages]
 
 Number of pages per topic is indicative only, but your report must be under 25 pages in total. You must emphasise the space context for your work. Even if you are developing software or doing something R&D related that may not be directly space connected, you need to explicitly address the space element in your report.
 
-# Writing your Report
+### Writing your Report
 Do not leave writing the report until August. Think of it as a separate work-package that you need to be chipping away at throughout the project. Even if you begin by putting a template together and just keep adding bullet points, that will help you a lot. You might find it helpful to use a tool such as Pacemaker to figure out what writing approach works best for you. Documenting your work as you go takes the pain out of writing the final report.
 
-# Structure and Layout of the Report
+### Structure and Layout of the Report
 Follow the general standard layout to structure your report. The total length for the main
 chapters (i.e. excluding title page, original authorship statement, acknowledgements,
 abstract, table of contents, list of figures and tables, bibliography and appendices) should be 25 pages max, using 12pt Times Roman (or similar) font and approximately 2.5cm margin all around. Recommendation is to use LaTeX/Overleaf but this is not obligatory.
