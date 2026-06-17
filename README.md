@@ -10,6 +10,9 @@ All code found in this repository is based on and taken directly from:
 - ESA Pol-InSAR course content and notebooks (DLR/DLRESA, April 13th - July 17th, 2026)
 - https://github.com/satim-co/PolSARpro.git
 
+### Link of Report/Minithesis (Latex in Overleaf)
+https://www.overleaf.com/read/nnthvbfdkyqs#f6b572 
+
 ### Author
 Orlaith Doyle, UCD MSc Space Science & Technology Student.
 Intern in ESA Climate Action, Sustainability and Science Department, (May 1st - October 30th, 2026).
