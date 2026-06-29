@@ -110,22 +110,22 @@ abstract, table of contents, list of figures and tables, bibliography and append
 
 #### •	List of Acronyms   
 
-#### •	Chapter 1 – Introduction.   
+#### •	Chapter 1. Introduction.   
       o	If a research-based project, present the current state-of-the-art, and a statement of the research questions/problems addressed by your project, and their relevance to space. If an industry-based project, describe the business of the company, the services or products offered, and the global market in which the company/business operates.  
   
-#### •	Chapter 2 - Theory (only include if relevant to your project)   
+#### •	Chapter 2. Theory (only include if relevant to your project)   
       o	An outline of the relevant theoretical background to your project.  
   
-#### •	Chapter 3 - Observations / Methodology / Experimental Set-up.   
+#### •	Chapter 3. Observations / Methodology / Experimental Set-up.   
       o	A description of the approach employed in the internship, including an assessment of the suitability/limitations of this approach to address the problem in question.  
   
-#### •	Chapter 4 – Results.   
+#### •	Chapter 4. Results.   
       o	Present your results, data analysis and findings, including errors/uncertainties, where relevant.  
   
-#### •	Chapter 5 – Discussion.   
+#### •	Chapter 5. Discussion.   
       o	This gives your interpretation of the results and the implications.  
   
-#### •	Chapter 6 - Conclusions.   
+#### •	Chapter 6. Conclusions.   
       o	A concise statement of your results and their implications within the field. It should also briefly outline the impact of the results in a broader context e.g. for the economy and/or society. Finally, this section should include recommendations, including future research directions.  
 
 _In some cases, Chapters 4 and 5 can be merged, or Chapters 5 and 6. You can decide which structure works best for your project. You may not need a Theory chapter for example. Just make sure you are addressing questions 1-7 [above] within your report._  
