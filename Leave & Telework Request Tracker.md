@@ -9,7 +9,7 @@
   
 ## Leave Requests  
  •	June; 12, 15.    
- • July; 13
+ • July; 13    
  •	August; 17, 27, 28.  
 
 ## Sick Day
