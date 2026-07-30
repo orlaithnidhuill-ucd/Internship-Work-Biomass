@@ -3,8 +3,8 @@
 
 ## Teleworking Requests (from home in Den Haag)  
  •	May; ~~19, 26~~.                                 [Key; ~~text~~ = Completed]  
- •	June; ~~16, 25, 30~~   
- •	July; 9, 20, 21, 24, 27, 29, 31.  
+ •	June; ~~16, 25, 30~~.     
+ •	July; ~~9, 20, 21, 24, 27, 29, 30~~.    
  •	August; 3, 5, 7, 9, 10, 14, 21, 24.   
   
 ## Leave Requests  
