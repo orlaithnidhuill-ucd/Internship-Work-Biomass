@@ -5,9 +5,9 @@
  •	May; ~~19, 26~~.                                 [Key; ~~text~~ = Completed]  
  •	June; ~~16, 25, 30~~.     
  •	July; ~~9, 20, 21, 24, 27, 29, 30~~.    
- •	August; 3, 5, 7, 9, 10, 14, 21, 24.   
+ •	August; ~~3, 4, 5, 6, 7~~, 21, 24.   
   
-## Leave Requests  
+## Leave Requests  [Used: 11/15]
  •	June; ~~12, 15.~~    
  • July; ~~13~~    
  •	August; 10, 11, 12, 13, 14, 17, 27, 28.  
