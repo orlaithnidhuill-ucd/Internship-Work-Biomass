@@ -7,21 +7,17 @@ cryospheric change detection. Maintained as a working record for the report and 
 supervisor's reference.
 
 ### Contents
-- [`2. Worked Notebooks`](2.%20Worked%20Notebooks) — case study processing (Amazon, Ganges-Meghna, Guiana Shelf, El Niño Pacific)
-- [`3. Output Plots & Figures`](3.%20Output%20Plots%20&%20Figures) — output plots and figures by case study
-- [`4. Reusable Processing Scripts`](4.%20Reusable%20Processing%20Scripts) — ocean masking, calibration, MAAP access, orientation fixes
-- [`5. Full Report & Poster`](5.%20Full%20Report%20&%20Poster) — internship report and poster
-- [`6. UCD Internship Expectation Information`](6.%20UCD%20Internship%20Expectation%20Information) — module/supervisor/placement details
+- [`2. Worked Notebooks`](2.%20Worked%20Notebooks) Case study processing (Amazon, Ganges-Meghna, Guiana Shelf, El Niño Pacific)
+- [`3. Output Plots & Figures`](3.%20Output%20Plots%20&%20Figures) Output plots and figures by case study
+- [`4. Reusable Processing Scripts`](4.%20Reusable%20Processing%20Scripts) Handy scripts for future work; Ocean masking, calibration, MAAP access, orientation fixes etc
+- [`5. Full Report & Poster`](5.%20Full%20Report%20&%20Poster) Final internship report and poster
+- [`6. UCD Internship Expectation Information`](6.%20UCD%20Internship%20Expectation%20Information) This is a dedicated module/placement detail folder for my supervisor's access
 
 ### Data
-The Biomass satellite, launched April 2025, carries a P-band SAR (435 MHz) capable of deep
-penetration through vegetation, dry sand and ice, making it uniquely suited to secondary
-science investigations across diverse Earth surface types. All data is sourced from the ESA
-MAAP Explorer platform (explorer.maap.eo.esa.int). Products are mostly Biomass Level 1a
-S1_SCS__1S (Single Look Complex Stripmap), full polarimetry (HH, HV, VH, VV), P-band 435 MHz,
-processed by the Biomass Central Processing Facility. Raw data files (TIFFs, binary products)
-are not tracked in this repository due to size, though acquisition guidance is in
-[`4. Reusable Processing Scripts`](4.%20Reusable%20Processing%20Scripts) under "MAAP Product Acquisition".
+The Biomass satellite, launched April 2025, carries a P-band SAR (435 MHz) capable of deep penetration through vegetation, dry sand and ice, making it uniquely suited to secondary
+science investigations across diverse Earth surface types. All data is sourced from the ESA MAAP Explorer platform (explorer.maap.eo.esa.int). Products are mostly Biomass Level 1a
+S1_SCS__1S (Single Look Complex Stripmap), full polarimetry (HH, HV, VH, VV), P-band 435 MHz, processed by the Biomass Central Processing Facility. Raw data files (TIFFs, binary products)
+are not tracked in this repository due to size, though acquisition guidance is in [`4. Reusable Processing Scripts`](4.%20Reusable%20Processing%20Scripts) under "MAAP Product Acquisition".
 
 ### Code sources
 All code in this repository is based on and taken directly from:
