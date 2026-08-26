@@ -1,0 +1,4 @@
+Some AI help was was used to help clean up and rearrange the notebooks within this folder. 
+This included removing duplicate and superseded exploratory cells, extracting repeated cells (data access, file aquisition, circular statistics) 
+into shared reusable scripts, and organising the GitHub repository structure. All analysis logic, scientific decisions,
+and results are the author's own; AI assistance was limited to code organisation and cleanup, not analysis or interpretation.
