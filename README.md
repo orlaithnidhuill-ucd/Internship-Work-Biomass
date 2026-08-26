@@ -7,7 +7,7 @@ cryospheric change detection. Maintained as a working record for the report and 
 supervisor's reference.
 
 ### Contents
-- [`2. Worked Notebooks`](2.%20Worked%20Notebooks) Case study processing (Amazon, Ganges-Meghna, Guiana Shelf, El Niño Pacific)
+- [`2. Notebooks and Study Case Cells`](2.%20Worked%20Notebooks) Case study processing (Amazon, Ganges-Meghna, Guiana Shelf, El Niño Pacific)
 - [`3. Output Plots & Figures`](3.%20Output%20Plots%20&%20Figures) Output plots and figures by case study
 - [`4. Reusable Processing Scripts`](4.%20Reusable%20Processing%20Scripts) Handy scripts for future work; Ocean masking, calibration, MAAP access, orientation fixes etc
 - [`5. Full Report & Poster`](5.%20Full%20Report%20&%20Poster) Final internship report and poster
