@@ -1,26 +1,4 @@
-"""
-granule_cache.py
-Batch-loads a directory of Biomass granules into an in-memory `layers` list
-(one dict per frame: track, frame, phi, lon, lat) plus a summary DataFrame,
-with pickle caching so a kernel restart doesn't force a full ~50-minute
-reload, and incremental extension when new granules are added later.
-
-Generalizes the load / cache-load / extend-with-new-frames cells that were
-duplicated (with only path constants changed) across the El Nino, Amazon,
-and Ganges notebooks.
-
-Usage:
-    from pathlib import Path
-    from granule_cache import load_or_build_cache, extend_cache
-
-    layers, df = load_or_build_cache(
-        archive_dir=Path(r'C:\\Users\\Orlaith.Doyle\\Nino\\Nino-prods\\2026-06-30'),
-        cache_path=Path(r'C:\\Users\\Orlaith.Doyle\\Nino\\layers_2026-06-30.pkl'),
-        decimation=6, min_frames=3)
-
-    # later, after downloading more granules into the same archive_dir:
-    layers, df = extend_cache(layers, df, archive_dir=..., cache_path=..., decimation=6)
-"""
+# loads a folder of granules into layers/df, caches so a kernel restart doesn't mean a 50mins reload, and can extend the cache later with any new granules that show up
 import gc
 import pickle
 import numpy as np
@@ -29,9 +7,7 @@ from pathlib import Path
 
 from biomass_io import read_bands, parse_granule_id, corner_grid, hhvv_phase, is_complete_granule
 
-
 def _process_one(nom, decimation):
-    """Loads one granule, returns (layer_dict, row_dict) or raises."""
     _, trk, frm = parse_granule_id(nom.name)
     amp = read_bands(next(nom.glob('*i_abs.tiff')))
     pha = read_bands(next(nom.glob('*i_phase.tiff')))
@@ -58,14 +34,7 @@ def _process_one(nom, decimation):
     del lon, lat, phi, pl
     return layer, row
 
-
 def load_granules(archive_dir, decimation=6, min_frames=3, progress_every=20):
-    """
-    Loads every complete granule in archive_dir into `layers` (list of
-    dicts) and a summary DataFrame `df`. Tracks with fewer than
-    min_frames are dropped. Prints progress every `progress_every`
-    granules rather than per-granule (quiet mode).
-    """
     archive_dir = Path(archive_dir)
     noms = sorted(g for g in archive_dir.iterdir()
                   if g.is_dir() and is_complete_granule(g))
@@ -101,13 +70,8 @@ def load_granules(archive_dir, decimation=6, min_frames=3, progress_every=20):
 
     return layers, df
 
-
 def load_or_build_cache(archive_dir, cache_path, decimation=6, min_frames=3):
-    """
-    Loads layers/df from cache_path if it exists, otherwise builds it from
-    archive_dir with load_granules() and writes the cache. This is the
-    pattern to run first after every kernel restart.
-    """
+    # run this first after every kernel restart
     cache_path = Path(cache_path)
     if cache_path.exists():
         with open(cache_path, 'rb') as f:
@@ -122,13 +86,8 @@ def load_or_build_cache(archive_dir, cache_path, decimation=6, min_frames=3):
     print(f'\ncached to {cache_path.name} ({cache_path.stat().st_size / 1e6:.0f} MB)')
     return layers, df
 
-
 def extend_cache(layers, df, archive_dir, cache_path, decimation=6):
-    """
-    Scans archive_dir for granules not already present in `layers`
-    (matched on track+frame), processes only those, appends to layers/df,
-    and rewrites the cache. Never removes or reprocesses existing frames.
-    """
+    # only processes granules not already in layers, never touches existing ones
     archive_dir = Path(archive_dir)
     have = {(l['track'], l['frame']) for l in layers}
     noms = sorted(g for g in archive_dir.iterdir()
