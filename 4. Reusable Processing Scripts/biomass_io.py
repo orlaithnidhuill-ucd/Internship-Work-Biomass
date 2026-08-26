@@ -1,60 +1,25 @@
-"""
-biomass_io.py
-Low-level readers for a single Biomass L1a SCS granule: polarimetric TIFF
-bands, granule-ID parsing, and KML-corner-based per-pixel georeferencing.
-
-Consolidated from repeated cells across the El Nino case-study notebook
-(granule-load cell, cache-load cell, and new-frame-processing cell) — all
-three defined near-identical copies of these three functions.
-
-IMPORTANT: TIFF band order is (VV, VH, HV, HH) — opposite to the XML label
-order. This is baked into BAND_ORDER below; do not reorder without checking
-against the annotation XML.
-
-Usage:
-    from biomass_io import read_bands, parse_granule_id, corner_grid, hhvv_phase
-
-    amp = read_bands(granule_dir.glob('*i_abs.tiff').__next__())
-    pha = read_bands(granule_dir.glob('*i_phase.tiff').__next__())
-    phi = hhvv_phase(amp, pha)
-    lon, lat = corner_grid(granule_dir, *phi.shape)
-"""
+# Code cell for reading Biomass granules, TIFF bands, granule ID parsing, KML georeferencing
 import re
 import numpy as np
 from datetime import datetime
 from lxml import etree
 
-BAND_ORDER = ('VV', 'VH', 'HV', 'HH')  # TIFF band order — opposite to XML label order
-
+BAND_ORDER = ('VV', 'VH', 'HV', 'HH')  # TIFF band order (opposite to XML label order)
 try:
     import rasterio
-    _BACKEND = 'rasterio'
+    BACKEND = 'rasterio'
 except Exception:
     import tifffile
-    _BACKEND = 'tifffile'
-
+    BACKEND = 'tifffile'
 
 def read_bands(path):
-    """
-    Reads a 4-band Biomass polarimetric TIFF and returns a dict keyed by
-    polarisation: {'HH': array, 'HV': array, 'VH': array, 'VV': array}.
-    Uses rasterio if available, falls back to tifffile (needed when
-    rasterio's GDAL DLL is broken, e.g. on this Windows/conda setup).
-    """
-    if _BACKEND == 'rasterio':
+    if BACKEND == 'rasterio':
         with rasterio.open(path) as src:
-            return {BAND_ORDER[b]: src.read(b + 1).astype(np.float32)
-                    for b in range(4)}
+            return {BAND_ORDER[b]: src.read(b + 1).astype(np.float32) for b in range(4)}
     arr = tifffile.imread(path)
     return {BAND_ORDER[b]: arr[b].astype(np.float32) for b in range(4)}
 
-
 def parse_granule_id(gid):
-    """
-    Extracts (start_datetime, track_int, frame_int) from a Biomass granule
-    ID string. Track/frame are returned as plain ints (e.g. 'T033' -> 33),
-    not the zero-padded string, so they sort and compare naturally.
-    """
     dates = re.findall(r'(\d{8}T\d{6})', gid)
     start = datetime.strptime(dates[0], '%Y%m%dT%H%M%S') if dates else None
     trk = re.search(r'_(T\d{3})_', gid)
@@ -63,22 +28,8 @@ def parse_granule_id(gid):
             int(trk.group(1)[1:]) if trk else None,
             int(frm.group(1)[1:]) if frm else None)
 
-
 def corner_grid(granule_dir, n_lines, n_samples):
-    """
-    Builds per-pixel (lon, lat) arrays of shape (n_lines, n_samples) by
-    bilinear interpolation between the four corner coordinates in the
-    granule's KML file, oriented using the orbitPass field in the
-    annotation XML (ascending vs descending changes which corner is
-    "first row").
-
-    Returns (None, None) if no KML is present or it can't be parsed.
-
-    KML gx:LatLonQuad corner order is: bottom-left, bottom-right,
-    top-right, top-left (lon, lat pairs) — this function does not assume
-    that order and instead derives north/south/near/far edges from the
-    points themselves, then uses orbitPass to decide row 0 vs row -1.
-    """
+    # bilinear interp between the 4 KML corners, oriented using orbitPass
     kml = next(granule_dir.glob('*.kml'), None)
     if kml is None:
         return None, None
@@ -123,20 +74,13 @@ def corner_grid(granule_dir, n_lines, n_samples):
     grid = top * (1 - frac_r) + bot * frac_r
     return grid[..., 0], grid[..., 1]
 
-
 def hhvv_phase(amp, pha):
-    """
-    Given amplitude and phase band dicts (as returned by read_bands, for
-    the *_i_abs.tiff and *_i_phase.tiff products respectively), returns
-    the wrapped HH-VV copolar phase difference array.
-    """
     hh = amp['HH'] * np.exp(1j * pha['HH'])
     vv = amp['VV'] * np.exp(1j * pha['VV'])
     return np.angle(np.exp(1j * (np.angle(hh) - np.angle(vv))))
 
 
 def is_complete_granule(granule_dir):
-    """True if a granule folder has amplitude, phase, and KML files."""
     return bool(
         next(granule_dir.glob('*i_abs.tiff'), None)
         and next(granule_dir.glob('*i_phase.tiff'), None)
