@@ -1,6 +1,6 @@
 # ![#1589F0](https://placehold.co/15x15/1589F0/1589F0.png) `Internship Module Information` 
 _(Adapted into single file format for Bjorn)_  
-*Author;* Professor Lorraine Hanlon. (Compiled by Orlaith with author permission).    
+*Author;* Professor Lorraine Hanlon. (Compiled by Orlaith with author recommendation).    
 *Document Sources;*  UCD Module - PHYC40950 Space Sector Internship.
 
 # ![#c5f015](https://placehold.co/15x15/c5f015/c5f015.png) `Table of Contents` 
