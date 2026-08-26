@@ -14,7 +14,8 @@ except Exception:
     import tifffile
     BACKEND = 'tifffile'
 
-BASE     = Path(r'C:\Users\Orlaith.Doyle\STEP_BACK')
+BASE     = Path(r'C:\Users\Orlaith.Doyle\STEP_BACK') # this will obviouly be different for the future intern that uses this
+
 ARCHIVE  = BASE / 'PLUME_ARCHIVE' / 'ganges'
 SMOS_DIR = ARCHIVE / 'smos'
 WC_CACHE = BASE / 'worldcover_cache'
