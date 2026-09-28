@@ -12,11 +12,11 @@
 # Leave Requests  [Used: 12/15]
 •	June; ~~12, 15~~.  
 • July; ~~13~~  
-•	August; ~~10, 11, 12, 13, 14, 17, 27, 28~~.  
-• November; 2, 16, 22, 30
+•	August; ~~10, 11, 12, 13, 14, 17, 27, 28~~.     
+• November; 2, 16, 22, 30    
 
 ## Sick Day  
 • June: 4  
 
-## Team Day
+## Team Day   
 • September: 11
