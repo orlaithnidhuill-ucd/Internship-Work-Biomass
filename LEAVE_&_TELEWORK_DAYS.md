@@ -13,7 +13,7 @@
 •	June; ~~12, 15~~.  
 • July; ~~13~~  
 •	August; ~~10, 11, 12, 13, 14, 17, 27, 28~~.  
-• November; ~~1 (Half-day from 2pm)~~, 16, 22, 30    
+• November; ~~1 (Half-day from 2pm)~~, 12 (Half day before 2pm), 16, 22, 30.
 
 ## Sick Day  
 • June: 4  
